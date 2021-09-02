@@ -1,0 +1,42 @@
+@import "../css/colores.scss";
+
+body {
+  background-color: $gris4;
+}
+
+.mat-form-field,
+input {
+  width: 100% !important;
+}
+
+
+.fondo-blanco {
+  background-color: $blanco;
+}
+
+.img-responsive {
+  width: 100%;
+}
+
+.sin-espaciado {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.container-fluid {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.espaciado-superior {
+  padding: 0.5em;
+  margin: 0.5em;
+}
+
+.espaciado-derecha {
+  padding: 0.5em;
+}
+
+.espaciado-izquierda {
+  padding: 0.5em;
+}
