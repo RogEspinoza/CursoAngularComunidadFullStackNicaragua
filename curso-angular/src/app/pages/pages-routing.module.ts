@@ -12,6 +12,11 @@ const routes: Routes = [
     data: { titulo: 'dashboard' }
   },
   {
+    path: 'dashboard',
+    component: DashboardComponent,
+    data: { titulo: 'dashboard' }
+  },
+  {
     path: 'pasajero',
     component: PasajeroComponent,
     data: { titulo: 'pasajero' }

@@ -40,3 +40,59 @@ input {
 .espaciado-izquierda {
   padding: 0.5em;
 }
+
+.contenedor-azul-celeste{
+  background: $azulCeleste;
+  color:$blanco;
+  margin: 10px;
+  }
+
+  .contenedor-azul-celeste span.texto{
+    font-size: 1.3em;
+    text-transform: uppercase;
+  }
+  
+  .contenedor-rosado{
+    background: $rosado;
+    color:$blanco;
+    text-transform: uppercase;
+    margin: 10px;
+  }
+
+  .contenedor-rosado span.texto{
+    font-size: 1.3em;
+    text-transform: uppercase;
+  }
+
+  .contenedor-verdeTierno{
+    background: $verdeTierno;
+    color:$blanco;
+    text-transform: uppercase;
+    margin: 10px;
+  }
+  .contenedor-verdeTierno span.texto{
+    font-size: 1.3em;
+    text-transform: uppercase;
+  }
+
+  .contenedor-oscuro{
+    background: $negro_b;
+    color:$blanco;
+    text-transform: uppercase;
+    margin: 10px;
+  }
+  .contenedor-oscuro span.texto{
+    font-size: 1.3em;
+    text-transform: uppercase;
+  }
+
+  .contenedor-amarillo{
+    background: $amarillo_b;
+    color:$blanco;
+    text-transform: uppercase;
+    margin: 10px;
+  }
+  .contenedor-amarillo span.texto{
+    font-size: 1.3em;
+    text-transform: uppercase;
+  }
