@@ -8,6 +8,7 @@ import { NoPageFoundComponent } from './no-page-found/no-page-found.component';
 import { MaterialModule } from 'src/modules/material/material.module';
 import { PasajeroComponent } from './pasajero/pasajero.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -23,6 +24,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
   imports: [
     CommonModule,
     RouterModule,
+    ReactiveFormsModule,
     MaterialModule
   ],
   exports:[
