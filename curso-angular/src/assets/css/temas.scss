@@ -96,3 +96,20 @@ input {
     font-size: 1.3em;
     text-transform: uppercase;
   }
+
+  table {
+    width: 100%;
+  }
+
+  th.mat-header-cell
+  {
+    color: $blanco;
+    font-weight: bold;
+  }
+  
+  tr.mat-header-row {
+    height: 56px;
+    background: #3f51b5;
+    color: #fff !important;
+}
+    
