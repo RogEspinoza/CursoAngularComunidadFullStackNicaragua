@@ -26,4 +26,15 @@ export class PasajeroService {
     );
   }
 
+  Guardar(pasajero: Pasajero): Observable<Pasajero | any> {
+    //debugger;
+    const url = `${this.urlApi}`;
+    return this.http.post(url, pasajero).pipe(
+      retry(2),
+      catchError((e) => {
+        return throwError(e);
+      })
+    );
+  }
+
 }

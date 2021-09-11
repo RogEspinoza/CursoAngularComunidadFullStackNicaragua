@@ -1,5 +1,6 @@
 export const environment = {
   production: false,
   local:true,
-  urlPasajero:'/api/pasajero'
+  urlPasajero:'/api/pasajero',
+  urlPaises:'/api/paises'
 };

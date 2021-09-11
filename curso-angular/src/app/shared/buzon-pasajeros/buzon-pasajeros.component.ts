@@ -1,6 +1,6 @@
 import { DatePipe } from '@angular/common';
 import { HttpErrorResponse } from '@angular/common/http';
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output, ViewChild } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
@@ -25,6 +25,8 @@ export class BuzonPasajerosComponent implements OnInit {
     'telefono',
     'numerodocumento'
   ];
+
+  @Output('esNuevo') esNuevo: EventEmitter<boolean> = new EventEmitter(false);
 
   constructor(
     private formbuilder: FormBuilder,
@@ -79,6 +81,10 @@ export class BuzonPasajerosComponent implements OnInit {
   MostrarFecha(pasajero: Pasajero) {
     let fecha = this.datepipe.transform(pasajero.fechaNacimiento, 'dd/MM/yyyy', 'GMT-0600', 'es-NI');
     return fecha;
+  }
+
+  Nuevo() {
+    this.esNuevo.emit(true);
   }
 
 }

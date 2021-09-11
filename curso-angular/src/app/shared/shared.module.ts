@@ -14,6 +14,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { MAT_DATE_LOCALE } from '@angular/material/core';
 import localeNI from "@angular/common/locales/es-NI";
 import localeNiExtra from "@angular/common/locales/es";
+import { RegistroPasajeroComponent } from './registro-pasajero/registro-pasajero.component';
 registerLocaleData(localeNI, "es-NI", localeNiExtra);
 
 
@@ -26,7 +27,8 @@ registerLocaleData(localeNI, "es-NI", localeNiExtra);
     NoPageFoundComponent,
     PasajeroComponent,
     DashboardComponent,
-    BuzonPasajerosComponent
+    BuzonPasajerosComponent,
+    RegistroPasajeroComponent
   ],
   imports: [
     CommonModule,
