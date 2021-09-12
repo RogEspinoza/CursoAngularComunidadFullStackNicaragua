@@ -1,7 +1,7 @@
 <form>
     <div class="row" *ngIf="!esNuevo">
         <div class="col-12 col-xs-12 col-sm-12 col-md-12 col-lg-12">
-            <app-buzon-pasajeros (esNuevo)="Nuevo($event)"></app-buzon-pasajeros>
+            <app-buzon-pasajeros (pasajero)="Recuperar($event)" (esNuevo)="Nuevo($event)"></app-buzon-pasajeros>
         </div>
     </div>
 
@@ -11,7 +11,7 @@
                 <i class="fa fa-reply"></i> Regresar
             </button>
         </div>
-        <app-registro-pasajero [formulario]="formPasajero"></app-registro-pasajero>
+        <app-registro-pasajero [infoPasajero]="infoPasajero" [formulario]="formPasajero"></app-registro-pasajero>
     </div>
 
 </form>

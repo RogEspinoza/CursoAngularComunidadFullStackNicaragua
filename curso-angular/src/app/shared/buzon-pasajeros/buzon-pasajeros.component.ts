@@ -23,10 +23,12 @@ export class BuzonPasajerosComponent implements OnInit {
     'nombrecompleto',
     'fechanacimiento',
     'telefono',
-    'numerodocumento'
+    'numerodocumento',
+    'acciones'
   ];
 
   @Output('esNuevo') esNuevo: EventEmitter<boolean> = new EventEmitter(false);
+  @Output('pasajero') pasajero: EventEmitter<Pasajero> = new EventEmitter();
 
   constructor(
     private formbuilder: FormBuilder,
@@ -85,6 +87,12 @@ export class BuzonPasajerosComponent implements OnInit {
 
   Nuevo() {
     this.esNuevo.emit(true);
+  }
+
+  Seleccionar(pasajero: Pasajero) {
+    //console.log('desde el hijo', pasajero);
+    this.pasajero.emit(pasajero);
+
   }
 
 }

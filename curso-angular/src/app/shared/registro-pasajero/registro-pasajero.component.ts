@@ -15,8 +15,10 @@ import Swal from 'sweetalert2';
 })
 export class RegistroPasajeroComponent implements OnInit {
   public pais: Paises[] = [];
+  private esEditar: boolean = false;
 
   @Input('formulario') formulario: FormGroup;
+  @Input('infoPasajero') infoPasajero: Pasajero;
 
   constructor(
     private paisService: PaisesService,
@@ -26,6 +28,11 @@ export class RegistroPasajeroComponent implements OnInit {
 
   ngOnInit(): void {
     this.ObtenerListaPaises();
+    if (this.infoPasajero) {
+      this.esEditar = true;
+      this.LLenarFormulario();
+      //console.log('desde el padre', this.infoPasajero);
+    }
   }
 
   ObtenerListaPaises() {
@@ -90,6 +97,24 @@ export class RegistroPasajeroComponent implements OnInit {
     this.formulario.reset();
     this.formulario.markAsPristine();
     this.formulario.markAsUntouched();
+  }
+
+  LLenarFormulario() {
+    if (this.infoPasajero) {
+      this.formulario.patchValue(this.infoPasajero)
+      // this.formulario.get('clave')?.patchValue(this.infoPasajero.clave);
+      // this.formulario.get('email')?.patchValue(this.infoPasajero.email);
+      // this.formulario.get('fechaNacimiento')?.patchValue(this.infoPasajero.fechaNacimiento);
+      // this.formulario.get('idPais')?.patchValue(this.infoPasajero.idPais);
+      // this.formulario.get('idPasajero')?.patchValue(this.infoPasajero.idPasajero);
+      // this.formulario.get('numDocumento')?.patchValue(this.infoPasajero.numDocumento);
+      // this.formulario.get('primerApellido')?.patchValue(this.infoPasajero.primerApellido);
+      // this.formulario.get('primerNombre')?.patchValue(this.infoPasajero.primerNombre);
+      // this.formulario.get('segundoApellido')?.patchValue(this.infoPasajero.segundoApellido);
+      // this.formulario.get('segundoNombre')?.patchValue(this.infoPasajero.segundoNombre);
+      // this.formulario.get('telefono')?.patchValue(this.infoPasajero.telefono);
+      // this.formulario.get('tipoDocumento')?.patchValue(this.infoPasajero.tipoDocumento);
+    }
   }
 
 }

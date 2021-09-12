@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { Pasajero } from '../models/pasajero/pasajero';
 
 @Component({
   selector: 'app-pasajero',
@@ -10,6 +11,7 @@ export class PasajeroComponent implements OnInit {
   public valorFormulario: any = {};
   public formPasajero: FormGroup = new FormGroup({});
   public esNuevo: boolean = false;
+  public infoPasajero: Pasajero;
 
   constructor(
     private formbuilder: FormBuilder
@@ -37,22 +39,25 @@ export class PasajeroComponent implements OnInit {
       tipoDocumento: new FormControl('', [])
     });
 
-    this.formPasajero.get('primerNombre')?.valueChanges.subscribe(x => {
-      console.log(x);
+    // this.formPasajero.get('primerNombre')?.valueChanges.subscribe(x => {
+    //   console.log(x);
 
-    });
-
-  }
-
-  MostrarValorFormulario() {
-    console.log('Valor formulario', this.formPasajero.getRawValue());
+    // });
   }
 
   Nuevo(d: boolean) {
     this.esNuevo = d;
   }
+  
   Regresar() {
     this.esNuevo = false;
+  }
+
+  Recuperar(pasajero: Pasajero) {
+    if (pasajero) {
+      this.esNuevo = true;
+      this.infoPasajero = pasajero;
+    }
   }
 
 }

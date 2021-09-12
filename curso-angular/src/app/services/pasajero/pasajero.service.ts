@@ -17,6 +17,7 @@ export class PasajeroService {
   ) { }
 
   ObtenerPasajeroId(id: string): Observable<Pasajero | any> {
+    //debugger;
     const url = `${this.urlApi}/${id}`;
     return this.http.get(url).pipe(
       retry(2),
